@@ -1,0 +1,140 @@
+.container{
+    width : 60%;
+    padding : 10px;
+    margin : auto;
+    background : rgb(209, 209, 209);
+    border : 1px solid lightgray;
+    border-radius: 10px; 
+    margin-top : 10%;
+    opacity : 0;
+    animation : showHidden 1s ease-out forwards;
+}
+
+@keyframes showHidden{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.speedspans{
+    position: absolute;
+    font-weight: bolder;
+    color : white;
+    top : 13%
+  }
+
+  .lowSpeedSpan{
+    left : 35%
+  }
+
+  .MidSpeedSpan{
+    left : 49%
+  }
+
+  .HighSpeedSpan{
+    left : 63%
+  }
+
+.range{
+}
+
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 30%; /* Full-width */
+    height: 5px; /* Specified height */
+    background: #ffdf2c; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    position: absolute;
+    top : 10%;
+    left : 35%;
+
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #ffffff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100%;
+  }
+
+ .bookingCount{
+  color :white;
+  position: absolute;
+  left : 44%;
+  top : 10%;
+ }
+
+ .bookingCountDanger{
+  color :tomato;
+  position: absolute;
+  left : 34%;
+  top : 10%;
+ }
+
+ .notice{
+  color : white;
+  position: absolute;
+  left : 44%;
+  top : 2%;
+ }
+
+
+ .snackbar{
+  position:absolute;
+  bottom : 2%;
+  left: 40%;
+  opacity: 1;
+  transform: translate(-100%);
+  background : black;
+  color : white;
+  font-weight: bolder;
+  padding : 20px 20px;
+  animation : snackbar 1.5s ease-out infinite;
+ }
+
+
+ @keyframes snackbar{
+  0%{
+    opacity: 1;
+    transform : translateY(0%);
+  }
+  40%{
+    opacity: 1;
+    transform: translateY(10%);
+  }
+  80%{
+    opacity: 1;
+    transform: translateY(-5%);
+  }
+  100%{
+    transform: translateY(0%);
+  } 
+ }
